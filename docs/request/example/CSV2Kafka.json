@@ -1,0 +1,7 @@
+{
+  "entryClass": "com._4paradigm.csp.operator.Main",
+  "parallelism": null,
+  "programArgs": "--source.type csv --source.path hdfs:///user/liyihui/csv --sink.kafka.brokers 172.27.128.54:9093 --sink.kafka.topic flink-test",
+  "savepointPath": null,
+  "allowNonRestoredState": null
+}

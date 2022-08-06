@@ -1,0 +1,7 @@
+{
+  "entryClass": "com._4paradigm.csp.operator.Main",
+  "parallelism": null,
+  "programArgs": "--source.type kafka_deduplication --source.kafka.brokers 172.27.128.54:9093 --source.kafka.topic lyh-key2 --auto.offset.reset earliest --group.id=f1 unique.keys=id,name --sink.kafka.brokers 172.27.128.54:9093 --sink.kafka.topic flink-test",
+  "savepointPath": null,
+  "allowNonRestoredState": null
+}

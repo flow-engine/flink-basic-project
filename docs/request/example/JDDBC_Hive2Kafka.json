@@ -1,0 +1,7 @@
+{
+  "entryClass": "com._4paradigm.csp.operator.Main",
+  "parallelism": null,
+  "programArgs": "--source.type jdbc --source.db.type hive --source.db.url jdbc:hive2://172.27.128.124:10000/lyh --source.db.username root --source.db.password 123456 --source.db.table lyh --source.db.sql 'select * from lyh limit 3' --sink.kafka.brokers 172.27.128.54:9093 --sink.kafka.topic flink-test",
+  "savepointPath": null,
+  "allowNonRestoredState": null
+}

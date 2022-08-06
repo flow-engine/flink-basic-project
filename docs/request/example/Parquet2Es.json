@@ -1,0 +1,18 @@
+{
+  "entryClass": "com._4paradigm.csp.operator.Main",
+  "programArgsList": [
+    "--job.name", "sql-es",
+    "--source.type", "parquet",  "--sink.type", "es", "--sink.es.sync.type", "full",
+    "--source.path", "hdfs://m7-common-cdh07:8020/user/liyihui/es/full_0",
+    "--source.watch.type", "PROCESS_ONCE",
+    "--sink.es.server", "172.27.14.125:9200",
+    "--sink.es.index", "lyh_local",
+    "--sink.es.type", "parquet",
+    "--sink.es.unique.column", "id",
+    "--sink.es.version.column", "version",
+    "--sink.es.version", "1587121530001",
+    "--stream.sql.enable", "true",
+    "--stream.sql.schema.json", "{\"city\": \"String\", \"name\": \"String\", \"x\": \"String\", \"y\": \"String\", \"tags\": \"String\", \"id\": \"Int\"}",
+    "--stream.sql", "select id, city, name, concat(x,'-', y) as location, arraySplit(tags, '|') as tags from t1"
+  ]
+}

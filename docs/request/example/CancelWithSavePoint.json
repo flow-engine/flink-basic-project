@@ -1,0 +1,4 @@
+{
+  "target-directory": "hdfs://m7-common-cdh07:8020/tmp/csp/flink/savepoints",
+  "cancel-job": true
+}

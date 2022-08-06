@@ -1,0 +1,136 @@
+[
+  {
+    "type": "mysql",
+    "displayName": "MySQL",
+    "versions": "8.0",
+    "port": "3306",
+    "driver": "com.mysql.cj.jdbc.Driver",
+    "escaper": "`",
+    "urlTemplate": "jdbc:mysql://#{host}:#{port}/#{dbname}?useUnicode=yes&characterEncoding=#{encoding}&useSSL=false",
+    "unsupportedTypes": [
+      "tinyblob",
+      "blob",
+      "mediumblob",
+      "longblob",
+      "varbinary",
+      "binary",
+      "enum",
+      "set",
+      "bool",
+      "time"
+    ],
+    "queryTemplate": "select #{columns} from #{table} limit #{previewLines}",
+    "driverVersion": "8.0.13"
+  },
+  {
+    "type": "teradata",
+    "displayName": "Teradata",
+    "versions": "15.10",
+    "port": "1025",
+    "driver": "com.teradata.jdbc.TeraDriver",
+    "escaper": "\"",
+    "urlTemplate": "jdbc:teradata://#{host}/DBS_PORT=#{port},DATABASE=#{dbname},CLIENT_CHARSET=#{encoding},COLUMN_NAME=ON",
+    "unsupportedTypes": [
+      "blob",
+      "cblob"
+    ],
+    "queryTemplate": "select top #{previewLines} #{columns} from #{table}",
+    "driverVersion": "16.00.00.28"
+  },
+  {
+    "type": "oracle",
+    "displayName": "Oracle",
+    "versions": "11g",
+    "port": "1521",
+    "driver": "oracle.jdbc.OracleDriver",
+    "escaper": "\"",
+    "urlTemplate": "jdbc:oracle:thin:@#{host}:#{port}:#{dbname}",
+    "unsupportedTypes": [
+      "binary_double",
+      "binary_float",
+      "long"
+    ],
+    "queryTemplate": "select #{columns} from #{table} where rownum <= #{previewLines}",
+    "driverVersion": "12.1.0.2"
+  },
+  {
+    "type": "vertica",
+    "displayName": "Vertica",
+    "versions": "9",
+    "port": "5433",
+    "driver": "com.vertica.jdbc.Driver",
+    "escaper": "\"",
+    "urlTemplate": "jdbc:vertica://#{host}:#{port}/#{dbname}",
+    "unsupportedTypes": [
+    ],
+    "queryTemplate": "select #{columns} from #{table} limit #{previewLines}",
+    "driverVersion": "9.1.1-0"
+  },
+  {
+    "type": "postgresql",
+    "displayName": "GreenPlum",
+    "versions": "1",
+    "port": "5432",
+    "driver": "org.postgresql.Driver",
+    "escaper": "\"",
+    "urlTemplate": "jdbc:postgresql://#{host}:#{port}/#{dbname}",
+    "unsupportedTypes": [
+    ],
+    "queryTemplate": "select #{columns} from #{table} limit #{previewLines}",
+    "driverVersion": "PostgreSQL 42.2.2"
+  },
+  {
+    "type": "hive",
+    "displayName": "Hive",
+    "versions": "FusionInsight-C60",
+    "port": "10000",
+    "driver": "org.apache.hive.jdbc.HiveDriver",
+    "escaper": "`",
+    "urlTemplate":
+        "jdbc:hive2://#{host}:#{port}/#{dbname}",
+    "unsupportedTypes": [
+    ],
+    "queryTemplate": "select #{columns} from #{table} limit #{previewLines}",
+    "driverVersion": "1.1.0"
+  },
+  {
+    "type": "db2",
+    "displayName": "DB2",
+    "versions": "9.1.0",
+    "port": "50000",
+    "driver": "com.ibm.db2.jcc.DB2Driver",
+    "escaper": "",
+    "urlTemplate": "jdbc:db2://#{host}:#{port}/#{dbname}",
+    "unsupportedTypes": [
+    ],
+    "queryTemplate": "select #{columns} from #{table} fetch first #{previewLines} rows only",
+    "driverVersion": "10.1"
+  },
+  {
+    "type": "sqlserver",
+    "displayName": "SqlServer",
+    "versions": "2017",
+    "port": "1433",
+    "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+    "escaper": "\"",
+    "urlTemplate": "jdbc:sqlserver://#{host}:#{port};database=#{dbname}",
+    "unsupportedTypes": [
+      "timestamp"
+    ],
+    "queryTemplate": "select top #{previewLines} #{columns} from #{table}",
+    "driverVersion": "6.4.0"
+  },
+  {
+    "type": "mppdb",
+    "displayName": "MPPDB",
+    "versions": "C80",
+    "port": "25308",
+    "driver": "org.postgresql.Driver",
+    "escaper": "\"",
+    "urlTemplate": "jdbc:postgresql://#{host}:#{port}/#{dbname}",
+    "unsupportedTypes": [
+    ],
+    "queryTemplate": "select #{columns} from #{table} limit #{previewLines}",
+    "driverVersion": "PostgreSQL 42.2.2"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "address": "http://flink-native-k8s-session-111.flink-cluster:8081",
+  "files": [
+    {
+      "id": "53ca7f25-4b42-4571-8376-e56e195bbc6f_csp-flink-operator-1.0-SNAPSHOT.jar",
+      "name": "csp-flink-operator-1.0-SNAPSHOT.jar",
+      "uploaded": 1583826926000,
+      "entry": [
+        {
+          "name": "com._4paradigm.csp.operator.Main",
+          "description": null
+        }
+      ]
+    }
+  ]
+}

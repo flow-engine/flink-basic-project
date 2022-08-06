@@ -1,0 +1,15 @@
+{"programArgsList":[
+  "--job.name", "lyh_jar8_exactly_once_cycle125_ck30s_large_compression_lz4_batch_64k_buffer_64M_sendBuffer_256k_sinkP_5",
+  "--source.type","csv",
+  "--source.path","hdfs://172.27.128.2:8020/user/xiaoxue/guangfa/user_detail",
+  "--sink.kafka.topic","lyh_jar8_exactly_once_cycle125_ck30s_large_compression_lz4_batch_64k_buffer_64M_sendBuffer_256k_sinkP_5",
+  "--stream.checkpoint.mode", "EXACTLY_ONCE",
+  "--sink.kafka.brokers","172.27.137.231:9092",
+  "--stream.sink.parallelism", "5",
+  "--stream.checkpoint.dir", "hdfs://172.27.128.2:8020/flink",
+  "--sink.kafka.send.buffer.bytes", "262144",
+  "--sink.kafka.batch.size", "65536",
+  "--sink.kafka.buffer.memory", "67108864",
+  "--sink.kafka.compression.type", "lz4",
+  "--stream.checkpoint.interval", "30000",
+  "--stream.checkpoint.min.pause", "30000"]}

@@ -1,0 +1,7 @@
+{
+  "entryClass": "com._4paradigm.csp.operator.Main",
+  "parallelism": null,
+  "programArgs": "--source.type kafka --source.kafka.brokers 172.27.128.54:9093 --source.kafka.topic json3 --auto.offset.reset earliest --group.id=f1 --stream.sql.table t1 --stream.sql 'select * from t1' --stream.sql.schema struct<id:Int,name:String> --sink.kafka.brokers 172.27.128.54:9093 --sink.kafka.topic flink-test",
+  "savepointPath": null,
+  "allowNonRestoredState": null
+}
